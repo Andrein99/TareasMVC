@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace TareasMVC.Entidades
 {
@@ -11,6 +12,8 @@ namespace TareasMVC.Entidades
         public string Descripcion { get; set; }
         public int Orden { get; set; }
         public DateTime FechaCreacion { get; set; }
+        public string UsuarioCreacionId { get; set; } 
+        public IdentityUser UsuarioCreacion { get; set; }
         public List<Paso> Pasos { get; set; } // Propiedad de navegación - Uno a muchos con la Entidad Paso.
         public List<ArchivoAdjunto> ArchivosAdjuntos { get; set; } // Propiedad de navegación - Uno a muchos con la Entidad Tarea (Una tarea va a tener varios archivos adjuntos).
     }
