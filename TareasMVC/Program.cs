@@ -8,6 +8,7 @@ using System.Globalization;
 using TareasMVC;
 using Microsoft.AspNetCore.Mvc.Razor;
 using TareasMVC.Servicios;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,6 +52,11 @@ builder.Services.AddLocalization(opciones =>
 {
     opciones.ResourcesPath = "Recursos"; // Ruta donde se encuentran los archivos de recursos para la localización
 }); // Configuración de localización para la aplicación
+
+
+builder.Services.AddTransient<IServicioUsuarios, ServicioUsuarios>(); // Registro del servicio para obtener el ID del usuario autenticado
+
+builder.Services.AddAutoMapper(config => config.AddMaps(typeof(Program).Assembly)); // Registro de AutoMapper para mapear entidades a DTOs y viceversa  
 
 var app = builder.Build();
 

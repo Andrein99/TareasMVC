@@ -20,7 +20,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.Saludo = localizer["Buenos días"];
+        
         return View();
     }
 
