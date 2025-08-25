@@ -59,8 +59,8 @@ builder.Services.AddLocalization(opciones =>
 
 
 builder.Services.AddTransient<IServicioUsuarios, ServicioUsuarios>(); // Registro del servicio para obtener el ID del usuario autenticado
-
 builder.Services.AddAutoMapper(config => config.AddMaps(typeof(Program).Assembly)); // Registro de AutoMapper para mapear entidades a DTOs y viceversa  
+builder.Services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>(); // Registro del servicio para almacenar archivos localmente
 
 var app = builder.Build();
 
