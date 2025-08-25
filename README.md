@@ -1,0 +1,2 @@
+## Proyecto
+Aplicación para el manejo de tareas personales desarrollada en ASP.NET Core 9 con Entity Framework Core. La aplicación fue desarrollada teniendo presentes los principios SOLID, y permite manejo de usuarios con rol de administración o de usuario corriente, tiene función para cambiar de idioma a inglés, inicio de sesión a través de Microsoft, gestión de tareas, pasos para dichas tareas, y añadidura de archivos adjuntos para cada tarea. La interactividad se realizó usando JQuery, JS nativo, KnockoutJS, y con el estilizado de Bootstrap. 
